@@ -1,0 +1,62 @@
+<body>
+    <div class="dishcard">
+        <div class="imgcont"><img src = {{dish.photos[0]}} (click)="setModalToImg(dish.photos[0])"> <img src = {{dish.photos[1]}} (click)="setModalToImg(dish.photos[1])"></div>
+    
+        <div class ="label">
+            <h2>{{dish.name}}</h2>
+            <h3>Cuisine: {{dish.cuisine}}</h3>
+            <h3>{{dish.category}}</h3>
+    </div>
+    <h5 id="vegan" [ngStyle]="{'display': dish.vegan ? 'block' : 'none'}">Vegan</h5>
+            <p>{{dish.description}}</p>
+    
+            <h4>Ingredients: </h4>
+            <div class="ingredients">
+                <div *ngFor="let ingredient of dish.ingredients">{{ingredient}}</div>
+            </div>
+    
+            <div class="stars-outer">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <div class="stars-inner" [ngStyle]="{'width' : (dish.reviewAvg)*20 + '%'}">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+    
+              <h3>${{dish.price}}</h3>
+            <div class="modal" id="mod" (click)="modal.style.display = 'none'">
+                <span id="cross" (click)="modal.style.display = 'none'">&times;</span>
+                <img src={{dish.photos[0]}} alt="" id="modimg">
+            </div>
+    
+            <div class="review" [ngStyle]="{'display' : canReview ? 'flex' : 'none'}">
+                <h3>Write a review:</h3>
+                <textarea id="text"></textarea>
+                <div><label for="ratingselector">Choose a grade:</label>
+                    <select name="ratingselector" id="ratingselector" selected="5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></div>
+                <button id="submitReview" (click)="submitReview()">Submit</button>
+            </div>
+    
+            <h3>Reviews of other users:</h3>
+            <div class="reviews" *ngFor="let review of reviewList">
+                <div class="displayreview">
+                    <h4>{{review.nick}}</h4>
+                    <p>{{review.text}}</p>
+                    <h3>{{review.grade}}/5</h3>
+                </div>
+            </div>
+    </div>
+</body>

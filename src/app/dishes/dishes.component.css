@@ -1,0 +1,185 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+* {
+	box-sizing: border-box;
+    font-family:'Segoe UI';
+    padding: 5px;
+}
+
+html, body {
+    background-color: lightgreen;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cart {
+    font-weight: bolder;
+    position: absolute;
+    right: 5%;
+    top: 200px;
+    width: 15%;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartposition {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.dishcard {
+    perspective: 150rem;
+    position: relative;
+    width: 50%;
+    border: 5px black solid;
+    height: 650px;
+    transition: box-shadow .3s;
+    background-color: white;
+}
+
+.dishcard:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1.0); 
+}
+
+.imgcont {
+    position: relative;
+    overflow: hidden;
+    height: 30%;
+    width: 100%;
+}
+
+.imgcont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.label {
+    display: flex;
+    justify-content: space-around;
+}
+
+.label h3 {
+    color: gray;
+    margin: auto;
+}
+
+.ingredients {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+.bottombar {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    margin: auto;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: coral;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+  }
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #f8ce0b;
+    width: 0;
+}
+
+.filters {
+    position: absolute;
+    left: 5%;
+    top: 200px;
+    width: 15%;
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+}
+
+#vegan {
+    color: green;
+    position: fixed;
+    top: 40%;
+    font-weight: bolder;
+}
+
+.price-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+  }
+
+  .range-slider {
+    position: relative;
+    margin: 15px 0 30px 0;
+  }
+  
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent; 
+    position: absolute;
+    left: 0;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #36b37e;
+    cursor: pointer;
+    margin-top: -5px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: black;
+    border-radius: 3px;
+    border: none;
+  }
+
+  .rightbuttons {
+    display: flex;
+  }
+
+  .rightbuttons span {
+    font-size: 30px;
+    cursor: pointer;
+  }

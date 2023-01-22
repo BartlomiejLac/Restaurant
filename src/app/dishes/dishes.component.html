@@ -1,0 +1,97 @@
+<body>
+    <div class="container" *ngFor="let dish of filteredDishes">
+        <div class="dishcard" [ngStyle]="{'border-color' : isTheMostExpensive(dish) ? 'green' : (isTheLeastExpensive(dish) ? 'red' : 'black')}">
+            <div class="imgcont" [routerLink]="['/dish', dish.id]" [ngStyle]="{'cursor' : 'pointer'}"><img src = {{dish.photos[0]}}></div>
+    
+            <div class ="label">
+                <h2>{{dish.name}}</h2>
+                <h3>Cuisine: {{dish.cuisine}}</h3>
+                <h3>{{dish.category}}</h3>
+        </div>
+        <h5 id="vegan" [ngStyle]="{'display': dish.vegan ? 'block' : 'none'}">Vegan</h5>
+                <p>{{dish.description}}</p>
+        
+                <h4>Ingredients: </h4>
+                <div class="ingredients">
+                    <div *ngFor="let ingredient of dish.ingredients">{{ingredient}}</div>
+                </div>
+    
+                <div class="stars-outer">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <div class="stars-inner" [ngStyle]="{'width' : (dish.reviewAvg)*20 + '%'}">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+    
+                <div class="bottombar">
+                    <h3 [ngStyle]="{'color' : (dish.max - dish.orderedCount)>3 ? 'black' : 'red'}">Left: {{dish.max - dish.orderedCount}}</h3>
+                    <span class="button" (click)="orderDish(dish)" [ngStyle]="{'display' : dish.max>0 ? 'flex' : 'none'}">+</span>
+                    <span class="button" (click)="unorderDish(dish)">-</span>
+                    <h3>${{dish.price}}</h3></div>
+                <div class="bottombar">
+                    <h3>Ordered: {{dish.orderedCount}}</h3>
+                    <div class="rightbuttons" [ngStyle]="{'display' : isAdmin() ? 'block' : 'none'}"><span [routerLink]="['/edit', dish.id]"><i class="bi bi-pencil"></i></span>
+                        <span (click)="deleteDish(dish)"><i class="bi bi-trash"></i></span></div>
+                </div>
+                
+        </div>
+    </div>
+    <div class="cart" [ngStyle]="{'background-color' : totalOrdered > 10 ? 'lightblue' : 'lightsalmon'}">
+        <div *ngFor="let order of currentOrder" class="cartposition">
+            <h4>{{order.dishName}}:</h4>
+            <h4>{{order.dishCount}}</h4>
+        </div>
+        <p>Ordered Dishes: {{totalOrdered}}</p>
+        <p>Total: ${{totalPrice}}</p>
+        <button (click)="order()" [disabled]="!isLoggedIn()">Order</button>
+        <button (click)="resetOrder()">Reset Cart</button>
+    </div>
+    <div class="filters">
+        <h3>Filter:</h3>
+        <label for="cuisineselector">Cuisine:</label>
+        <select name="cuisineselector" id="cuisineselector" (change)="filterData()">
+            <option value="Any">Any</option>
+            <option *ngFor="let cus of availableCuisines" [value]="cus">{{cus}}</option>
+        </select>
+        <label for="categoryelector">Category:</label>
+        <select name="categoryselector" id="categoryselector" (change)="filterData()">
+            <option value="Any">Any</option>
+            <option *ngFor="let cat of availableCategories" [value]="cat">{{cat}}</option>
+        </select>
+        <label for="ratingselector">Rating: </label>
+        <select name="ratingselector" id="ratingselector" selected="0" (change)="filterData()">
+            <option value="0">>=0</option>
+            <option value="1">>=1</option>
+            <option value="2">>=2</option>
+            <option value="3">>=3</option>
+            <option value="4">>=4</option>
+            <option value="5">>=5</option>
+        </select>
+        <label for="isvegan">Only vegan: </label>
+        <input type="checkbox" name="isvegan" id="isvegan" value="vegan" (change)="filterData()">
+        <label>Price:</label>
+        <div class="price-content">
+            <div>
+              <span id="min-value">$0</span>
+            </div>
+            <span>---</span>
+    
+            <div>
+              <span id="max-value">$50</span>
+            </div>
+          </div>
+    
+            <div class="range-slider">
+              <input type="range" id="min-slider" class="min-price" value="0.00" min="0.00" max="50.00" step="0.50" (change)="validateRange()">
+              <input type="range" id="max-slider" class="max-price" value="50.00" min="0.00" max="50.00" step="0.50" (change)="validateRange()">
+            </div>
+    </div>
+</body>

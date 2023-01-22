@@ -1,0 +1,7 @@
+<div class="container">
+    <div *ngFor="let user of userList" class="user">
+        <h3>{{user.mail}}</h3>
+        <h3>{{user.admin ? 'admin' : 'user'}}</h3>
+        <button [disabled]="user.mail === getMail()" (click)="switchPermission(user.id, user.admin)">Switch permissions</button>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+{
+    "dishes": [
+        {
+            "name": "Tofu Spaghetti",
+            "cuisine": "Italian",
+            "category": "Main Course",
+            "ingredients": [
+                "spaghetti pasta", "onion", "tofu", "tomato", "olive oil", "carrot", "mushrooms"
+            ],
+            "price": 10.99,
+            "description": "Crumbled and spiced tofu meets vegan basil and tomato sauce in our take on this all-time favorite comfort food - a big ol' pile of spaghetti topped with rich bolognese.",
+            "photos": [
+                "https://res.cloudinary.com/hsxfx8igq/image/upload/t_16x9_recipe_image,f_auto/v1617681784/Tofu_and_Pasta_Recipe_520x500_duvq62.jpg",
+                "https://www.everydayhealthyrecipes.com/wp-content/uploads/2020/10/Tofu-Bolognese.jpg"
+            ],
+            "max": 20,
+            "vegan": true,
+            "totalReviews": 0,
+            "reviewCount": 0
+        },
+        {
+            "name": "Lasagne Bolognese",
+            "cuisine": "Italian",
+            "category": "Main Course",
+            "ingredients": [
+                "lasagne pasta", "ground beef", "tomato", "mozzarella", "ricotta", "onion"
+            ],
+            "price": 14.99,
+            "description": "The Best Lasagna is here! Layered with a rich meat sauce and a creamy parmesan white sauce, plus the perfect amount of mozzarella cheese!",
+            "photos": [
+                "https://www.recipetineats.com/wp-content/uploads/2017/05/Lasagne-recipe-3-main-square.jpg",
+                "https://www.dontgobaconmyheart.co.uk/wp-content/uploads/2019/06/best-homemade-lasagne-recipe-1.jpg"
+            ],
+            "max": 15,
+            "vegan": false,
+            "totalReviews": 0,
+            "reviewCount": 0
+        },
+        {
+            "name": "Zurek",
+            "cuisine": "Polish",
+            "category": "Soup",
+            "ingredients": [
+                "rye starter", "sausage", "egg", "mushrooms", "sour cream"
+            ],
+            "price": 7.99,
+            "description": "A rich soup soured with fermented rye starter, served with a boiled egg",
+            "photos": [
+                "https://www.polonist.com/wp-content/uploads/2018/09/Zurek-Polish-Sour-Rye-Soup-1200x1200-1-720x720.jpg",
+                "https://images.kitchenstories.io/communityImages/1b727a8415597e9ff63f725ed6d28c7c_d5c16c55-da6b-4932-b6a9-819271b6ee37/1b727a8415597e9ff63f725ed6d28c7c_d5c16c55-da6b-4932-b6a9-819271b6ee37-large-landscape-150.jpg"
+            ],
+            "max": 40,
+            "vegan": false,
+            "totalReviews": 0,
+            "reviewCount": 0
+        },
+        {
+            "name": "Pierogi ruskie",
+            "cuisine":"Polish",
+            "category":"Appetizer",
+            "ingredients": [
+                "dough", "potato", "cottage cheese", "onion" 
+            ],
+            "price": 8.99,
+            "description": "Pierogi, boiled dumplings, are very flexible and can be stuffed with a number of savory or sweet fillings, including potato and cheese",
+            "photos": [
+                "https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/recipe_legacy/1750-3-large.jpg",
+                "https://bellyfull.net/wp-content/uploads/2020/04/Homemade-Pierogi-recipe-blog-3-500x500.jpg"
+            ],
+            "max": 30,
+            "vegan": false,
+            "totalReviews": 0,
+            "reviewCount": 0
+        },
+        {
+            "name": "Greek Salad",
+            "cuisine": "Greek",
+            "category": "Salad",
+            "ingredients": [
+                "onion", "olive oil", "vegan feta", "tomato", "oregano", "olive"
+            ],
+            "price": 6.99,
+            "description": "A traditional Greek salad consists of sliced cucumbers, tomatoes, green bell pepper, red onion, olives, and feta cheese.",
+            "photos": [
+                "https://www.themediterraneandish.com/wp-content/uploads/2020/02/Greek-salad-recipe-3.jpg",
+                "https://img.taste.com.au/_Y4UBHx_/taste/2016/11/greek-chopped-salad-83468-1.jpeg"
+            ],
+            "max": 30,
+            "vegan": true,
+            "totalReviews": 0,
+            "reviewCount": 0
+        },
+        {
+            "name": "Ramen",
+            "cuisine": "Asian",
+            "category": "Soup",
+            "ingredients": [
+                "ginger", "onion", "egg", "mushrooms", "noodles", "boulion"
+            ],
+            "price": 8.99,
+            "description": "Moreish Japanese noodle soup, for when you crave something comforting yet light and wholesome.",
+            "photos": [
+                "https://www.forkknifeswoon.com/wp-content/uploads/2014/10/simple-homemade-chicken-ramen-fork-knife-swoon-01.jpg",
+                "https://www.kitchensanctuary.com/wp-content/uploads/2020/12/Quick-Chicken-Ramen-square-FS-22.jpg"
+            ],
+            "max": 35,
+            "vegan": false,
+            "totalReviews": 0,
+            "reviewCount": 0
+        },
+        {
+            "name": "French Crepes",
+            "cuisine": "French",
+            "category": "Breakfast",
+            "ingredients": [
+                "flour", "sugar", "milk", "egg", "butter", "strawberry", "cream"
+            ],
+            "price": 9.99,
+            "description": "French crêpes are good for weekend breakfasts, or even for desserts.",
+            "photos": [
+                "https://www.monpetitfour.com/wp-content/uploads/2014/01/crepes-720x405.jpg",
+                "https://www.theflavorbender.com/wp-content/uploads/2022/06/Crepes-03-2.jpg"
+            ],
+            "max": 20,
+            "vegan": false,
+            "totalReviews": 0,
+            "reviewCount": 0
+        },
+        {
+            "name": "Frog Legs",
+            "cuisine": "French",
+            "category": "Main Course",
+            "ingredients": [
+                "frog legs", "onion", "olive oil", "garlic", "zucchini"
+            ],
+            "price": 15.99,
+            "description": "Ready to try a unique recipe? How about this Garlic Frog Legs recipe",
+            "photos": [
+                "https://honest-food.net/wp-content/uploads/2013/08/fried-frog-legs-recipe-1.jpg",
+                "https://honest-food.net/wp-content/uploads/2017/08/stir-fried-frog-legs-recipe-1.jpg"
+            ],
+            "max": 10,
+            "vegan": false,
+            "totalReviews": 0,
+            "reviewCount": 0
+        }
+    ]
+}

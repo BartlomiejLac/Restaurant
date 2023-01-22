@@ -1,0 +1,48 @@
+<body>
+    <form [formGroup]="dishForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="entry">
+            <label>Name</label>
+            <input type = "text" formControlName="name" required>
+        </div>
+        <div class="entry">
+            <label>Cuisine</label>
+            <input type = "text" formControlName="cuisine" required>
+        </div>
+        <div class="entry">
+            <label>Category</label>
+            <input type = "text" formControlName="category" required>
+        </div>
+        <div class="entry">
+            <label>Ingredients</label>
+            <input type = "text" formControlName="ingredients" required>
+        </div>
+        <div class="entry">
+            <label>Price</label>
+            <input type = "text" formControlName="price" required>
+        </div>
+        <div class="entry">
+            <label>Description</label>
+            <input type = "text" formControlName="description" required>
+        </div>
+        <div class="entry">
+            <label>Main Photo</label>
+            <input type = "text" formControlName="photo1" required>
+        </div>
+        <div class="entry">
+            <label>Additional Photo</label>
+            <input type = "text" formControlName="photo2" required>
+        </div>
+        <div class="entry">
+            <label>Max</label>
+            <input type = "text" formControlName="max" required>
+        </div>
+        <div class="entry">
+            <label>Vegan</label>
+            <input type = "checkbox" formControlName="vegan">
+        </div>
+        
+        <div>
+            <button type="submit" [disabled]="!dishForm.valid">Confirm</button>
+        </div>
+    </form>
+</body>

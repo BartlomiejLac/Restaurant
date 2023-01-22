@@ -1,0 +1,10 @@
+<body>
+    <div class="form">
+        <label for="emailSignup">Email:</label>
+        <input type="text" #emailSignup/>
+        <label for="passwordSignup">Password:</label>
+        <input type="text" #passwordSignup/>
+        <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Sign up</button>
+        <button (click)="onLogin(emailSignup.value, passwordSignup.value)">Log in</button>
+    </div>
+</body>

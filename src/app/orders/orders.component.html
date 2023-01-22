@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngFor="let order of ordersList" class="order">
+        <h3>{{order.date}}</h3>
+        <div>
+            <h3>Articles:</h3>
+            <div *ngFor="let article of getListFromOrder(order)" class="element">
+                {{article.dishName}} : {{article.dishCount}}
+            </div>
+        </div>
+    </div>
+</div>

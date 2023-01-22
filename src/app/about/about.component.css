@@ -1,0 +1,29 @@
+* {
+    font-family: 'Segoe UI';
+}
+
+body {
+    background-color: lightgreen;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container div {
+    width: 40%;
+    background-color: white;
+    border: 30px white solid;
+}
+
+.container iframe {
+    width: 100%;
+}
+
